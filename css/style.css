@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+:root {
+    scroll-behavior: smooth;
+
+    /* colors */
+    --color-white:#ffffff;
+    --color-black:#000000;
+    --color-black-alpha-45:#00000045;
+    --color-black-alpha-10:#0000001a;
+    --color-green:#84E974;
+    --color-green-dark:#5ead52;
+    --color-antiquewhite:#faebd7;
+    --color-aqua:#00ffff;
+    --color-tomato:#ff6347;
+    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --color-white:#13131a;
+    --color-black:#c7c7c7;
+    --color-black-alpha-45:#ffffff45;
+    --color-black-alpha-10:#ffffff1a;
+    --color-green:#529745;
+    --color-green-dark:#294b23;
+    --color-antiquewhite:#241e17;
+    --color-aqua:#011e1e;
+    --color-tomato:#2b110c;
+    }
+}
+   
+
+body {
+    font-family: "Inter", serif;
+    color: var(--color-black-alpha-10);
+    background-color: var(--color-white);
+}
+
+.main {}
+
+.header {
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+
+}
+
+.brand {}
+
+.brand__svg {}
+
+.nav {
+    display: flex;
+    gap: 16px;
+    
+}
+
+.nav__link {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: 600;
+}
+.nav__link:hover {
+    background-color:var(--color-black-alpha-10);
+}
+
+.nav__link--primary {
+    background-color:var(--color-green);
+
+}
+
+.nav__link--primary:hover {
+    background-color: var(--color-green-dark);
+
+}
+
+.nav__link--icon-only {
+    padding: 8px;
+    display: none;
+}
+.nav__icon {
+    display: block;
+}
+
+.page {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 160px;
+    font-weight: 800;
+    color: var(--color-black-alpha-45);
+   
+}
+
+.page--one {
+    background-color: var(--color-antiquewhite) ;
+}
+
+.page--two {
+    background-color: var(--color-aqua) ;
+}
+.page--three {
+    background-color: var(--color-tomato) ;
+}
+
+/* mobile media queries */
+/* desktop first */
+@media (max-width: 768px) {
+    .nav__link {
+        display: none;
+    }
+    .nav__link--icon-only {
+        display: block;
+    }
+
+    .nav__link--primary {
+        display: flex;
+    
+    }
+
+}
